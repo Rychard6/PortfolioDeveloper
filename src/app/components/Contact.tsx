@@ -30,16 +30,30 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 dark:bg-black min-h-screen py-12">
-            <div className="container mx-auto px-6">
-                <h1 className="text-4xl font-bold text-gray-800 dark:text-white text-center mb-12">
+        <section
+            id="contact"
+            className="bg-gray-100 dark:bg-black min-h-screen py-12"
+            aria-labelledby="contact-heading"
+        >
+            <div className="container mx-auto px-4 sm:px-6">
+                {/* Título da seção */}
+                <h1
+                    id="contact-heading"
+                    className="text-4xl font-bold text-gray-800 dark:text-white text-center mb-12"
+                >
                     Entre em Contato
                 </h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Entre em contato comigo para discutir projetos, colaborações ou qualquer dúvida. Estou sempre
+                    disponível para ajudar!
+                </p>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Formulário de Contato */}
                     <form
                         onSubmit={handleSubmit}
                         className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+                        aria-label="Formulário de contato"
                     >
                         <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
                             Envie uma mensagem
@@ -59,6 +73,7 @@ const Contact: React.FC = () => {
                                 onChange={handleChange}
                                 required
                                 className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Digite seu nome"
                             />
                         </div>
                         <div className="mb-4">
@@ -76,6 +91,7 @@ const Contact: React.FC = () => {
                                 onChange={handleChange}
                                 required
                                 className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Digite seu email"
                             />
                         </div>
                         <div className="mb-4">
@@ -93,18 +109,22 @@ const Contact: React.FC = () => {
                                 required
                                 rows={5}
                                 className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Digite sua mensagem"
                             ></textarea>
                         </div>
                         <button
                             type="submit"
-                            className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+                            className="w-full px-4 py-2 bg-emerald-400 text-white rounded-lg shadow hover:bg-emerald-600 transition"
                         >
                             Enviar
                         </button>
                     </form>
 
                     {/* Botão do WhatsApp */}
-                    <div className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <div
+                        className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+                        aria-label="Contato pelo WhatsApp"
+                    >
                         <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
                             Fale pelo WhatsApp
                         </h2>

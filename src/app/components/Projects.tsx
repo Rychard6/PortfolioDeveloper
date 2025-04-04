@@ -45,27 +45,41 @@ const Projects: React.FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 dark:bg-black min-h-screen py-12">
+        <section
+            id="projects"
+            className="bg-gray-100 dark:bg-black min-h-screen py-12"
+            aria-labelledby="projects-heading"
+        >
             <div className="container mx-auto px-6">
-                <h1 className="text-4xl font-bold text-gray-800 dark:text-white text-center mb-12">
+                {/* Título da seção */}
+                <h1
+                    id="projects-heading"
+                    className="text-4xl font-bold text-gray-800 dark:text-white text-center mb-12"
+                >
                     Meus Projetos
                 </h1>
+                <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Aqui estão alguns dos projetos que desenvolvi, utilizando tecnologias modernas e práticas de desenvolvimento eficientes.
+                </p>
+
+                {/* Grid de projetos */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="relative group cursor-pointer rounded-lg shadow-lg overflow-hidden"
+                            className="relative group cursor-pointer rounded-lg shadow-lg overflow-hidden dark:bg-gradient-to-r from-emerald-100 to-teal-100"
                         >
                             {/* Card */}
                             <img
                                 src={project.image}
-                                alt={project.title}
+                                alt={`Imagem do projeto ${project.title}`}
                                 className="w-full h-80 object-cover transition-opacity duration-300 group-hover:opacity-30"
                             />
                             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button
                                     onClick={() => handleOpenModal(project)}
                                     className="px-4 py-2 bg-white text-gray-800 rounded-lg shadow hover:bg-gray-200 transition w-32 text-center"
+                                    aria-label={`Saber mais sobre o projeto ${project.title}`}
                                 >
                                     Saber mais
                                 </button>
@@ -74,6 +88,7 @@ const Projects: React.FC = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-4 py-2 bg-emerald-500 text-white rounded-lg shadow hover:bg-emerald-600 transition w-32 text-center"
+                                    aria-label={`Visitar o site do projeto ${project.title}`}
                                 >
                                     Visitar
                                 </a>
@@ -85,9 +100,17 @@ const Projects: React.FC = () => {
 
             {/* Modal */}
             {modalData && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                    aria-labelledby="modal-title"
+                    role="dialog"
+                    aria-modal="true"
+                >
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-11/12 max-w-md text-center">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+                        <h2
+                            id="modal-title"
+                            className="text-2xl font-bold text-gray-800 dark:text-white mb-4"
+                        >
                             {modalData.title}
                         </h2>
                         <p className="text-gray-600 dark:text-gray-300 mb-4">
@@ -99,10 +122,10 @@ const Projects: React.FC = () => {
                                     <div key={index} className="flex flex-col items-center">
                                         <img
                                             src={tool.logo}
-                                            alt={tool.name}
+                                            alt={`Logo da tecnologia ${tool.name}`}
                                             className="w-10 h-10"
                                         />
-                                        <span className="text-xs mt-2 text-gray-800 dark:text-gray-300">
+                                        <span className="text-xs mt-2 text-gray-800 dark:text-gray-300 rounded-lg px-2 py-1">
                                             {tool.name}
                                         </span>
                                     </div>
@@ -112,6 +135,7 @@ const Projects: React.FC = () => {
                         <button
                             onClick={handleCloseModal}
                             className="px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition"
+                            aria-label="Fechar modal"
                         >
                             Fechar
                         </button>

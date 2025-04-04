@@ -4,10 +4,15 @@ import { motion } from 'framer-motion';
 
 export default function Profile() {
   return (
-    <section id="profile" className="py-20 bg-gray-100 dark:bg-black">
+    <section
+      id="profile"
+      className="py-20 bg-gray-100 dark:bg-black"
+      aria-labelledby="profile-heading"
+    >
       <div className="container mx-auto px-6">
         {/* Título da seção */}
         <motion.h2
+          id="profile-heading"
           className="text-5xl font-extrabold text-center text-gray-800 dark:text-white tracking-wide"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +32,10 @@ export default function Profile() {
         {/* Linha do tempo */}
         <div className="relative mt-16">
           {/* Linha vertical */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-500"></div>
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-500"
+            aria-hidden="true"
+          ></div>
 
           {/* Itens da linha do tempo */}
           <div className="space-y-16">
@@ -39,7 +47,10 @@ export default function Profile() {
               transition={{ duration: 0.8 }}
             >
               {/* Bolinha */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+              <div
+                className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+                aria-hidden="true"
+              >
                 <div className="w-8 h-8 bg-green-500 rounded-full border-4 border-gray-100 dark:border-black"></div>
               </div>
 
@@ -51,7 +62,8 @@ export default function Profile() {
               {/* Card */}
               <div className="bg-white dark:bg-gray-800 border border-green-500 rounded-lg p-6 shadow-lg w-full md:w-[45%] ml-12">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                  Desenvolvedor Full Stack - <span className="text-green-500">Empresa Junior de Computação - CJR</span>
+                  Desenvolvedor Full Stack -{' '}
+                  <span className="text-green-500">Empresa Junior de Computação - CJR</span>
                 </h3>
                 <span className="text-sm text-gray-500 dark:text-gray-400">2022 - Atualmente</span>
                 <p className="mt-2 text-gray-600 dark:text-gray-300">
@@ -68,7 +80,10 @@ export default function Profile() {
               transition={{ duration: 0.8 }}
             >
               {/* Bolinha */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+              <div
+                className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+                aria-hidden="true"
+              >
                 <div className="w-8 h-8 bg-green-500 rounded-full border-4 border-gray-100 dark:border-black"></div>
               </div>
 
@@ -80,7 +95,8 @@ export default function Profile() {
               {/* Card */}
               <div className="bg-white dark:bg-gray-800 border border-green-500 rounded-lg p-6 shadow-lg w-full md:w-[45%] mr-12">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                  Estagiário de Desenvolvimento - <span className="text-green-500">Central IT</span>
+                  Estagiário de Desenvolvimento -{' '}
+                  <span className="text-green-500">Central IT</span>
                 </h3>
                 <span className="text-sm text-gray-500 dark:text-gray-400">Jan 2024 - Jan 2025</span>
                 <p className="mt-2 text-gray-600 dark:text-gray-300">
@@ -97,7 +113,10 @@ export default function Profile() {
               transition={{ duration: 0.8 }}
             >
               {/* Bolinha */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+              <div
+                className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+                aria-hidden="true"
+              >
                 <div className="w-8 h-8 bg-green-500 rounded-full border-4 border-gray-100 dark:border-black"></div>
               </div>
 
@@ -109,7 +128,8 @@ export default function Profile() {
               {/* Card */}
               <div className="bg-white dark:bg-gray-800 border border-green-500 rounded-lg p-6 shadow-lg w-full md:w-[45%] ml-12">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white">
-                  Desenvolvedor Júnior - <span className="text-green-500">Holding Canuto</span>
+                  Desenvolvedor Júnior -{' '}
+                  <span className="text-green-500">Holding Canuto</span>
                 </h3>
                 <span className="text-sm text-gray-500 dark:text-gray-400">Jan 2025 - Atualmente</span>
                 <p className="mt-2 text-gray-600 dark:text-gray-300">

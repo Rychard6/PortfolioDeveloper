@@ -1,10 +1,30 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaDocker, FaPython, FaAws } from 'react-icons/fa';
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPrisma, SiPostgresql, SiMongodb, SiExpress, SiGraphql, SiFirebase } from 'react-icons/si';
+import {
+    FaReact,
+    FaNodeJs,
+    FaHtml5,
+    FaCss3Alt,
+    FaGitAlt,
+    FaGithub,
+    FaDocker,
+    FaPython,
+    FaAws,
+} from 'react-icons/fa';
+import {
+    SiNextdotjs,
+    SiTypescript,
+    SiTailwindcss,
+    SiPrisma,
+    SiPostgresql,
+    SiMongodb,
+    SiExpress,
+    SiGraphql,
+    SiFirebase,
+} from 'react-icons/si';
 
-// Lista de tecnologias com nome, ícone, descrição, porcentagem e tempo de experiência
+// Lista de tecnologias com nome, ícone, porcentagem e tempo de experiência
 const technologies = [
     { name: 'React', icon: <FaReact size={50} className="text-blue-400" />, percentage: 90, experience: '3 anos' },
     { name: 'Next.js', icon: <SiNextdotjs size={50} className="text-black dark:text-white" />, percentage: 85, experience: '2 anos' },
@@ -28,15 +48,24 @@ const technologies = [
 
 export default function TechStack() {
     return (
-        <section id="techstack" className="py-20 bg-gray-100 dark:bg-gray-900">
+        <section
+            id="stack"
+            className="py-20 bg-gray-100 dark:bg-gray-900"
+            aria-labelledby="stack-heading"
+        >
             <div className="container mx-auto px-6 text-center">
-                <h2 className="text-4xl font-extrabold text-gray-800 dark:text-white tracking-wide">
+                {/* Título da seção */}
+                <h2
+                    id="stack-heading"
+                    className="text-4xl font-extrabold text-gray-800 dark:text-white tracking-wide"
+                >
                     <span className="text-green-500">Minhas</span> Habilidades
                 </h2>
                 <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
                     Aqui estão as tecnologias e ferramentas que utilizo para criar soluções inovadoras e eficientes.
                     Cada uma delas reflete minha experiência e dedicação ao desenvolvimento de software.
                 </p>
+
                 {/* Grid de Tecnologias */}
                 <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
                     {technologies.map((tech, index) => (
