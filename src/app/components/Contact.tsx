@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
     return (
         <section
             id="contact"
-            className="bg-gray-100 dark:bg-black min-h-screen py-12"
+            className="bg-gray-100 dark:bg-gray-900 min-h-screen py-12"
             aria-labelledby="contact-heading"
         >
             <div className="container mx-auto px-4 sm:px-6">

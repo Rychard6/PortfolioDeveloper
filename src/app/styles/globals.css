@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -150,4 +151,20 @@ body {
 
 .typical-wrapper::after {
   content: none !important;
+}
+
+@media (max-width: 340px) {
+  /* Estilos para telas menores que 340px */
+  .grid {
+    grid-template-columns: 1fr !important; /* Força 1 coluna no grid */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+
+  .card {
+    width: 100% !important; /* Faz os cards ocuparem toda a largura */
+    max-width: 300px; /* Define um limite máximo de largura */
+    height: auto !important; /* Ajusta a altura automaticamente */
+    margin: 0 auto; /* Centraliza os cards horizontalmente */
+  }
 }

@@ -48,40 +48,42 @@ const Projects: React.FC = () => {
     return (
         <section
             id="projects"
-            className="bg-gray-100 dark:bg-black min-h-screen py-12"
+            className="bg-gray-100 dark:bg-gray-800 min-h-screen py-12 overflow-hidden"
             aria-labelledby="projects-heading"
         >
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-4 sm:px-6">
                 {/* Título da seção */}
                 <h1
                     id="projects-heading"
-                    className="text-4xl font-bold text-gray-800 dark:text-white text-center mb-12"
+                    className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white text-center mb-2"
                 >
                     Meus Projetos
                 </h1>
-                <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                <div className="w-32 h-1 bg-green-500 mx-auto mb-8"></div>
+
+                <p className="text-center text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto text-sm sm:text-base">
                     Aqui estão alguns dos projetos que desenvolvi, utilizando tecnologias modernas e práticas de desenvolvimento eficientes.
                 </p>
 
                 {/* Grid de projetos */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="relative group cursor-pointer rounded-lg shadow-lg overflow-hidden dark:bg-gradient-to-r from-emerald-100 to-teal-100"
+                            className="relative group cursor-pointer rounded-lg shadow-lg overflow-hidden bg-white dark:bg-gray-700"
                         >
                             {/* Card */}
                             <Image
                                 src={project.image}
                                 alt={`Imagem do projeto ${project.title}`}
-                                width={400} // Largura da imagem
-                                height={300} // Altura da imagem
+                                width={400}
+                                height={300}
                                 className="w-full h-auto object-cover transition-opacity duration-300 group-hover:opacity-30"
                             />
-                            <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="absolute inset-0 flex flex-col items-center justify-center space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button
                                     onClick={() => handleOpenModal(project)}
-                                    className="px-4 py-2 bg-white text-gray-800 rounded-lg shadow hover:bg-gray-200 transition w-32 text-center"
+                                    className="px-4 py-2 bg-white text-gray-800 rounded-lg shadow hover:bg-gray-200 transition text-sm sm:text-base"
                                     aria-label={`Saber mais sobre o projeto ${project.title}`}
                                 >
                                     Saber mais
@@ -90,7 +92,7 @@ const Projects: React.FC = () => {
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-4 py-2 bg-emerald-500 text-white rounded-lg shadow hover:bg-emerald-600 transition w-32 text-center"
+                                    className="px-4 py-2 bg-emerald-500 text-white rounded-lg shadow hover:bg-emerald-600 transition text-sm sm:text-base"
                                     aria-label={`Visitar o site do projeto ${project.title}`}
                                 >
                                     Visitar
@@ -109,7 +111,7 @@ const Projects: React.FC = () => {
                     role="dialog"
                     aria-modal="true"
                 >
-                    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 w-11/12 max-w-md text-center">
+                    <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 w-11/12 max-w-md text-center">
                         <h2
                             id="modal-title"
                             className="text-2xl font-bold text-gray-800 dark:text-white mb-4"
@@ -126,8 +128,8 @@ const Projects: React.FC = () => {
                                         <Image
                                             src={tool.logo}
                                             alt={`Logo da tecnologia ${tool.name}`}
-                                            width={40} // Largura do logo
-                                            height={40} // Altura do logo
+                                            width={40}
+                                            height={40}
                                             className="w-10 h-10"
                                         />
                                         <span className="text-xs mt-2 text-gray-800 dark:text-gray-300 rounded-lg px-2 py-1">

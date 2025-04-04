@@ -50,35 +50,35 @@ export default function TechStack() {
     return (
         <section
             id="stack"
-            className="py-20 bg-gray-100 dark:bg-gray-900"
+            className="py-20 bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen"
             aria-labelledby="stack-heading"
         >
-            <div className="container mx-auto px-6 text-center">
+            <div className="container mx-auto px-4 sm:px-6 text-center">
                 {/* Título da seção */}
                 <h2
                     id="stack-heading"
-                    className="text-4xl font-extrabold text-gray-800 dark:text-white tracking-wide"
+                    className="text-3xl sm:text-4xl font-extrabold text-gray-800 dark:text-white tracking-wide"
                 >
                     <span className="text-green-500">Minhas</span> Habilidades
                 </h2>
-                <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-6 text-sm sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
                     Aqui estão as tecnologias e ferramentas que utilizo para criar soluções inovadoras e eficientes.
                     Cada uma delas reflete minha experiência e dedicação ao desenvolvimento de software.
                 </p>
 
                 {/* Grid de Tecnologias */}
-                <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
+                <div className="mt-10 grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 justify-center items-center">
                     {technologies.map((tech) => (
                         <motion.div
                             key={tech.name}
-                            className="relative flex flex-col items-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg cursor-pointer w-48 h-36"
+                            className="relative flex flex-col items-center p-3 sm:p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg cursor-pointer w-36 h-32 sm:w-48 sm:h-36"
                             whileHover={{ scale: 1.1 }}
                             transition={{ duration: 0.3 }}
                         >
                             {/* Frente do card */}
                             <div className="absolute inset-0 flex flex-col items-center justify-center">
                                 {tech.icon}
-                                <span className="mt-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                <span className="mt-2 text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                                     {tech.name}
                                 </span>
                             </div>
@@ -96,7 +96,7 @@ export default function TechStack() {
                                         style={{ width: `${tech.percentage}%` }}
                                     ></div>
                                 </div>
-                                <span className="mt-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                                <span className="mt-2 text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                                     {tech.percentage}% de conhecimento
                                 </span>
                                 <span className="text-xs text-gray-500 dark:text-gray-400">

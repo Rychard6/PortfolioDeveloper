@@ -66,9 +66,9 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="text-center md:text-left"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mt-2">Olá, eu sou</h1>
-          <h1 className="text-4xl sm:text-5xl font-bold text-green-500">Rychard Ryan</h1>
-          <h2 className="text-base sm:text-lg text-black dark:text-white mt-4">
+          <h1 className="text-3xl sm:text-5xl font-bold mt-2">Olá, eu sou</h1>
+          <h1 className="text-3xl sm:text-5xl font-bold text-green-500">Rychard Ryan</h1>
+          <h2 className="text-sm sm:text-lg text-black dark:text-white mt-4">
             <Typical
               steps={[
                 "Desenvolvedor de Software",
@@ -79,13 +79,13 @@ export default function Hero() {
               loop={Infinity}
             />
           </h2>
-          <p className="mt-4 text-black dark:text-white max-w-md mx-auto md:mx-0">
+          <p className="mt-4 text-sm sm:text-base text-black dark:text-white max-w-md mx-auto md:mx-0">
             Apaixonado por tecnologia, crio soluções digitais inovadoras que impulsionam negócios e otimizam experiências. Especializado em desenvolvimento web e engenharia de software.
           </p>
 
           {/* Ícones sociais estilizados */}
           <motion.div
-            className="mt-6 flex justify-center md:justify-start space-x-6"
+            className="mt-6 flex justify-center md:justify-start space-x-4 sm:space-x-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
@@ -95,7 +95,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="bg-gray-800 p-4 rounded-full text-2xl text-white hover:bg-green-500 transition"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-xl sm:text-2xl text-white hover:bg-green-500 transition"
               whileHover={{ scale: 1.2 }}
             >
               <FaGithub />
@@ -106,7 +106,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="bg-gray-800 p-4 rounded-full text-2xl text-white hover:bg-green-500 transition"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-xl sm:text-2xl text-white hover:bg-green-500 transition"
               whileHover={{ scale: 1.2 }}
             >
               <FaLinkedin />
@@ -117,7 +117,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="bg-gray-800 p-4 rounded-full text-2xl text-white hover:bg-green-500 transition"
+              className="bg-gray-800 p-3 sm:p-4 rounded-full text-xl sm:text-2xl text-white hover:bg-green-500 transition"
               whileHover={{ scale: 1.2 }}
             >
               <FaInstagram />
@@ -132,18 +132,18 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <div className="relative w-48 h-48 sm:w-64 sm:h-64">
+          <div className="relative w-40 h-40 sm:w-64 sm:h-64">
             <motion.div
               className="absolute inset-0 border-4 border-green-500 rounded-full animate-spin-slow border-dashed circle-border"
             ></motion.div>
             <div className="w-full h-full bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
-            <Image
-              src="/FotoPerfil.jpeg"
-              alt="Rychard Ryan"
-              width={256} // Substitua pelo tamanho desejado
-              height={256} // Substitua pelo tamanho desejado
-              className="w-full h-full object-cover rounded-full"
-            />
+              <Image
+                src="/FotoPerfil.jpeg"
+                alt="Rychard Ryan"
+                width={256}
+                height={256}
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </div>
         </motion.div>
@@ -151,7 +151,7 @@ export default function Hero() {
 
       {/* Estatísticas com animação de contagem */}
       <motion.div
-        className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-black dark:text-white text-center max-w-3xl"
+        className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-black dark:text-white text-center max-w-3xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
@@ -167,11 +167,11 @@ export default function Hero() {
             whileHover={{ scale: 1.1, rotate: 3 }}
             className="transition transform"
           >
-            <span className="text-black dark:text-white text-2xl sm:text-3xl font-bold">
+            <span className="text-black dark:text-white text-xl sm:text-3xl font-bold">
               <CountUp end={item.number} duration={3} />
             </span>
             <br />
-            {item.text}
+            <span className="text-sm sm:text-base">{item.text}</span>
           </motion.div>
         ))}
       </motion.div>

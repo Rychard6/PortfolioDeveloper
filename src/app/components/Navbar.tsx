@@ -5,10 +5,7 @@ import { motion } from "framer-motion";
 import Theme from "../Theme";
 
 const Navbar = () => {
-
   const [isOpen, setIsOpen] = useState(false); // Estado para o menu mobile
-
-
 
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);
@@ -23,9 +20,9 @@ const Navbar = () => {
       className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-800 transition-all"
       aria-label="Navegação principal"
     >
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+      <div className="container mx-auto flex justify-between items-center py-4 px-4 sm:px-6">
         {/* Nome estilizado com chaves piscando */}
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white font-serif cursor-pointer">
+        <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white font-serif cursor-pointer">
           <a href="#hero" aria-label="Voltar ao início" className="flex items-center">
             <motion.span
               className="text-green-500"
@@ -46,7 +43,7 @@ const Navbar = () => {
         </h1>
 
         {/* Navegação Desktop */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 dark:text-gray-300 font-medium">
+        <ul className="hidden md:flex space-x-4 sm:space-x-6 text-gray-700 dark:text-gray-300 font-medium">
           {[
             { name: "Início", id: "hero" },
             { name: "Sobre", id: "profile" },
@@ -72,8 +69,8 @@ const Navbar = () => {
           <a
             href="/curriculo.pdf"
             download
-            className="px-5 py-2 rounded-lg font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
-            hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:text-white transition-all duration-300"
+            className="px-4 py-2 rounded-lg font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
+            hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:text-white transition-all duration-300 text-sm sm:text-base"
             aria-label="Baixar currículo"
           >
             Download CV
@@ -152,7 +149,7 @@ const Navbar = () => {
                 href="/curriculo.pdf"
                 download
                 className="block px-5 py-2 rounded-lg font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
-                hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:text-white transition-all duration-300"
+                hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:text-white transition-all duration-300 text-sm"
                 aria-label="Baixar currículo"
               >
                 Download CV
