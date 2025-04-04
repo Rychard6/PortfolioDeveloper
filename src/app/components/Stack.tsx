@@ -50,7 +50,7 @@ export default function TechStack() {
     return (
         <section
             id="stack"
-            className="py-20 bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen"
+            className="py-20 bg-white dark:bg-gray-900 flex items-center justify-center min-h-screen"
             aria-labelledby="stack-heading"
         >
             <div className="container mx-auto px-4 sm:px-6 text-center">
