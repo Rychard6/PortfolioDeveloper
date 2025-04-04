@@ -1,18 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Theme from "../Theme";
 
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false); // Estado para o menu mobile
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
 
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);

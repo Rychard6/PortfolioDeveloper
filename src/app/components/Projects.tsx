@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const projects = [
     {
@@ -70,10 +71,12 @@ const Projects: React.FC = () => {
                             className="relative group cursor-pointer rounded-lg shadow-lg overflow-hidden dark:bg-gradient-to-r from-emerald-100 to-teal-100"
                         >
                             {/* Card */}
-                            <img
+                            <Image
                                 src={project.image}
                                 alt={`Imagem do projeto ${project.title}`}
-                                className="w-full h-80 object-cover transition-opacity duration-300 group-hover:opacity-30"
+                                width={400} // Largura da imagem
+                                height={300} // Altura da imagem
+                                className="w-full h-auto object-cover transition-opacity duration-300 group-hover:opacity-30"
                             />
                             <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button
@@ -120,9 +123,11 @@ const Projects: React.FC = () => {
                             <div className="flex justify-center space-x-4 mb-4">
                                 {modalData.tools.map((tool, index) => (
                                     <div key={index} className="flex flex-col items-center">
-                                        <img
+                                        <Image
                                             src={tool.logo}
                                             alt={`Logo da tecnologia ${tool.name}`}
+                                            width={40} // Largura do logo
+                                            height={40} // Altura do logo
                                             className="w-10 h-10"
                                         />
                                         <span className="text-xs mt-2 text-gray-800 dark:text-gray-300 rounded-lg px-2 py-1">

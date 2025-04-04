@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import CountUp from "react-countup";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Typical from "react-typical";
+import Image from "next/image";
 
 export default function Hero() {
   useEffect(() => {
@@ -53,13 +54,6 @@ export default function Hero() {
               {item}
             </motion.a>
           ))}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="bg-green-500 px-3 sm:px-4 py-2 rounded-md shadow-lg text-sm sm:text-base"
-          >
-            Contrate-me
-          </motion.button>
         </div>
       </motion.nav>
 
@@ -143,7 +137,13 @@ export default function Hero() {
               className="absolute inset-0 border-4 border-green-500 rounded-full animate-spin-slow border-dashed circle-border"
             ></motion.div>
             <div className="w-full h-full bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
-              <img src="/FotoPerfil.jpeg" alt="Rychard Ryan" className="w-full h-full object-cover rounded-full" />
+            <Image
+              src="/FotoPerfil.jpeg"
+              alt="Rychard Ryan"
+              width={256} // Substitua pelo tamanho desejado
+              height={256} // Substitua pelo tamanho desejado
+              className="w-full h-full object-cover rounded-full"
+            />
             </div>
           </div>
         </motion.div>

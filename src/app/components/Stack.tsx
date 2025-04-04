@@ -68,7 +68,7 @@ export default function TechStack() {
 
                 {/* Grid de Tecnologias */}
                 <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
-                    {technologies.map((tech, index) => (
+                    {technologies.map((tech) => (
                         <motion.div
                             key={tech.name}
                             className="relative flex flex-col items-center p-4 rounded-lg bg-white dark:bg-gray-800 shadow-lg cursor-pointer w-48 h-36"
