@@ -69,7 +69,7 @@ const Navbar = () => {
           <a
             href="/curriculodev.pdf"
             download
-            onClick={(e) => {
+            onClick={() => {
               // Verifica se o download falhou
               const link = document.createElement("a");
               link.href = "/curriculodev.pdf";
