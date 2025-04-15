@@ -67,23 +67,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           {/* Botão de Download do CV */}
           <a
-            href="/curriculodev.pdf"
+            href="/curriculoRychard.pdf"
             download
-            onClick={() => {
-              // Verifica se o download falhou
-              const link = document.createElement("a");
-              link.href = "/curriculodev.pdf";
-              link.download = "curriculodev.pdf";
-              link.click();
-
-              // Caso o download falhe, redireciona para o Google Drive
-              if (!link) {
-                window.open(
-                  "https://drive.google.com/file/d/12jaF4XcTN6TmjayjrGGK9eg3SRMElQf_/view?usp=sharing",
-                  "_blank"
-                );
-              }
-            }}
             className="px-4 py-2 rounded-lg font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
             hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:text-white transition-all duration-300 text-sm sm:text-base"
             aria-label="Baixar currículo"

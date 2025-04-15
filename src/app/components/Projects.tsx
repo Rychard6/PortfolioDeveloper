@@ -158,7 +158,7 @@ const Projects: React.FC = () => {
               <div className="relative w-full h-full flex items-center justify-center">
                 <button
                   onClick={handlePrevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow hover:bg-gray-200"
+                  className="absolute w-10 h-10 left-4 top-1/2 transform -translate-y-1/2 bg-white opacity-75 text-black rounded-full p-2 shadow hover:bg-gray-200"
                   aria-label="Imagem anterior"
                 >
                   &#8592;
@@ -172,7 +172,7 @@ const Projects: React.FC = () => {
                 />
                 <button
                   onClick={handleNextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 shadow hover:bg-gray-200"
+                  className="absolute w-10 h-10 right-4 top-1/2 transform -translate-y-1/2 bg-white opacity-75 text-black rounded-full p-2 shadow hover:bg-gray-200"
                   aria-label="Próxima imagem"
                 >
                   &#8594;
@@ -182,7 +182,7 @@ const Projects: React.FC = () => {
             {/* Botão de fechar */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 bg-red-500 text-white rounded-full p-2 shadow hover:bg-red-600"
+              className="absolute w-10 h-10 top-4 right-4 bg-red-400 text-white rounded-full p-2 shadow hover:bg-red-600"
               aria-label="Fechar modal"
             >
               &#10005;
