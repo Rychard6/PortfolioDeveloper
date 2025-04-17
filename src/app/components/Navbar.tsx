@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           {/* Botão de Download do CV */}
           <a
-            href="/curriculoRychard.pdf"
+            href="/RychardCurriculo.pdf"
             download
             className="px-4 py-2 rounded-lg font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
             hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:text-white transition-all duration-300 text-sm sm:text-base"
