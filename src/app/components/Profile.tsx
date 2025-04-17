@@ -95,12 +95,12 @@ export default function Profile() {
               {/* Card */}
               <div className="bg-white dark:bg-gray-800 border border-green-500 rounded-lg p-4 sm:p-6 shadow-lg w-full md:w-[45%] mr-0 md:mr-12 mt-8 md:mt-0">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
-                  Estagiário de Desenvolvimento -{' '}
+                  Estagiário -{' '}
                   <span className="text-green-500">Central IT</span>
                 </h3>
                 <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Jan 2024 - Jan 2025</span>
                 <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                  Manutenção e desenvolvimento de sistemas internos, integração de APIs e otimização de performance. Participação em reuniões de planejamento e definição de requisitos.
+                  suporte à área de infraestrutura, com foco na organização e análise de dados operacionais.
                 </p>
               </div>
             </motion.div>
