@@ -131,7 +131,7 @@ export default function Profile() {
                   Desenvolvedor Júnior -{' '}
                   <span className="text-green-500">Holding Canuto</span>
                 </h3>
-                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Jan 2025 - Atualmente</span>
+                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Dez 2024 - Mar 2025</span>
                 <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                   Desenvolvimento de novas funcionalidades em sistemas corporativos, colaboração com equipes multidisciplinares e utilização de tecnologias modernas como TypeScript e GraphQL.
                 </p>
