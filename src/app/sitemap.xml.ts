@@ -1,6 +1,7 @@
-// pages/sitemap.xml.ts
-export const getServerSideProps = async ({ res }: any) => {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+import { GetServerSideProps } from "next";
+
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://rychardryan.com.br/</loc>
@@ -9,17 +10,16 @@ export const getServerSideProps = async ({ res }: any) => {
         <priority>1.0</priority>
       </url>
     </urlset>`;
-  
-    res.setHeader("Content-Type", "text/xml");
-    res.write(sitemap);
-    res.end();
-  
-    return {
-      props: {},
-    };
+
+  res.setHeader("Content-Type", "text/xml");
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
   };
-  
-  export default function Sitemap() {
-    return null;
-  }
-  
+};
+
+export default function Sitemap() {
+  return null;
+}
